@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uttam Business | Elite Eco-Friendly Pest Control & Prevention Services</title>
+    <meta name="description" content="Get premium, eco-friendly pest control services. Instant price estimates, professional certified technicians, and 100% guaranteed elimination of pests. Book online!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome/Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Blur Decorative Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="navbar-container">
+        <div class="navbar container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <span class="logo-text">Uttam<span class="text-accent">Business</span></span>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="#services" class="nav-link">Our Services</a>
+                <a href="#pest-library" class="nav-link">Pest Identifier</a>
+                <a href="#estimator" class="nav-link">Price Estimator</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#booking" class="nav-link">Book Now</a>
+                <a href="#faqs" class="nav-link">FAQs</a>
+            </nav>
+
+            <div class="navbar-actions">
+                <button id="theme-toggle" class="btn-icon" aria-label="Toggle Theme">
+                    <i data-lucide="moon" class="icon-moon"></i>
+                    <i data-lucide="sun" class="icon-sun" style="display: none;"></i>
+                </button>
+                <a href="#booking" class="btn btn-primary btn-sm">Get Free Quote</a>
+                <button class="mobile-nav-toggle" aria-label="Toggle Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer">
+        <div class="mobile-drawer-header">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <span class="logo-text">Uttam<span class="text-accent">Business</span></span>
+            </a>
+            <button class="mobile-drawer-close" aria-label="Close Menu">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="#services" class="mobile-drawer-link">Our Services</a>
+            <a href="#pest-library" class="mobile-drawer-link">Pest Identifier</a>
+            <a href="#estimator" class="mobile-drawer-link">Price Estimator</a>
+            <a href="#gallery" class="mobile-drawer-link">Gallery</a>
+            <a href="#booking" class="mobile-drawer-link">Book Now</a>
+            <a href="#faqs" class="mobile-drawer-link">FAQs</a>
+            <div class="mobile-drawer-cta">
+                <a href="#booking" class="btn btn-primary w-full text-center">Get Free Quote</a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section container">
+            <div class="hero-content">
+                <div class="badge-container">
+                    <span class="badge"><i data-lucide="sparkles"></i> Rated #1 Pest Control in the Region</span>
+                </div>
+                <h1 class="hero-title"><span class="gradient-text">Uttam Business</span>.</h1>
+                <p class="hero-subtitle">Eco-friendly, child & pet safe treatments starting at just $99. Backed by our 100% eradication guarantee. No contract required.</p>
+                <div class="hero-actions">
+                    <a href="#booking" class="btn btn-primary btn-lg"><i data-lucide="calendar"></i> Book Instant Service</a>
+                    <a href="#estimator" class="btn btn-secondary btn-lg"><i data-lucide="calculator"></i> Estimate Price</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">15K+</span>
+                        <span class="stat-label">Homes Protected</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9/5</span>
+                        <span class="stat-label">Google Rating</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfaction Guarantee</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="glass-card hero-image-container">
+                    <!-- Premium visual SVG overlaying a shields and home graphic -->
+                    <svg viewBox="0 0 500 500" class="hero-svg" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Definitions for Gradients -->
+                        <defs>
+                            <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#16a34a" />
+                                <stop offset="100%" stop-color="#ef4444" />
+                            </linearGradient>
+                            <linearGradient id="blueCircleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#3b82f6" />
+                                <stop offset="100%" stop-color="#06b6d4" />
+                            </linearGradient>
+                            <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#1e293b" stop-opacity="0.6" />
+                                <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Grid Lines -->
+                        <path d="M 50,0 L 50,500 M 100,0 L 100,500 M 150,0 L 150,500 M 200,0 L 200,500 M 250,0 L 250,500 M 300,0 L 300,500 M 350,0 L 350,500 M 400,0 L 400,500 M 450,0 L 450,500" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+                        <path d="M 0,50 L 500,50 L 0,100 L 500,100 M 0,150 L 500,150 M 0,200 L 500,200 M 0,250 L 500,250 M 0,300 L 500,300 M 0,350 L 500,350 M 0,400 L 500,400 M 0,450 L 500,450" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+                        <!-- Decorative Hexagons -->
+                        <polygon points="250,80 370,150 370,290 250,360 130,290 130,150" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="2" />
+                        <polygon points="250,110 340,165 340,275 250,330 160,275 160,165" fill="none" stroke="url(#shieldGrad)" stroke-width="3" stroke-dasharray="10 5" class="svg-spin" />
+                        <!-- Blue Circle with Cockroach Icon -->
+                        <circle cx="250" cy="250" r="54" fill="url(#blueCircleGrad)" stroke="#60a5fa" stroke-width="3" opacity="0.9" />
+                        <g stroke="#ffffff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- Antennae -->
+                            <path d="M 244,222 Q 234,204 218,204" stroke-width="2" />
+                            <path d="M 256,222 Q 266,204 282,204" stroke-width="2" />
+                            <!-- Legs -->
+                            <path d="M 233,234 L 216,228" />
+                            <path d="M 231,250 L 212,250" />
+                            <path d="M 233,266 L 216,272" />
+                            <path d="M 267,234 L 284,228" />
+                            <path d="M 269,250 L 288,250" />
+                            <path d="M 267,266 L 284,272" />
+                            <!-- Abdomen & Thorax -->
+                            <ellipse cx="250" cy="256" rx="16" ry="24" fill="#051207" stroke-width="3" />
+                            <ellipse cx="250" cy="232" rx="11" ry="8" fill="#051207" stroke-width="3" />
+                            <circle cx="250" cy="222" r="4.5" fill="#ffffff" stroke="none" />
+                        </g>
+                        <!-- Tiny radar blips -->
+                        <circle cx="130" cy="150" r="8" fill="#ef4444" class="svg-pulse" />
+                        <circle cx="370" cy="290" r="8" fill="#ef4444" class="svg-pulse" style="animation-delay: 1s;" />
+                        <circle cx="250" cy="360" r="8" fill="#ef4444" class="svg-pulse" style="animation-delay: 2s;" />
+                    </svg>
+                    <div class="hero-overlay-card top-left float-animation">
+                        <i data-lucide="shield" class="text-accent"></i>
+                        <div>
+                            <h4>Eco-Shield Pro</h4>
+                            <p>Pet & Child Safe</p>
+                        </div>
+                    </div>
+                    <div class="hero-overlay-card bottom-right float-animation" style="animation-delay: -2s;">
+                        <i data-lucide="award" class="text-yellow"></i>
+                        <div>
+                            <h4>100% Eradicated</h4>
+                            <p>Or free re-sprays</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Badges -->
+        <section id="services" class="services-section bg-secondary-layer">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Why Homeowners Trust PestGuard Pro</h2>
+                    <p class="section-subtitle">We don't just spray chemicals. We deploy integrated biological protection protocols to guard your boundary permanently.</p>
+                </div>
+                <div class="grid grid-4 text-center">
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon bg-emerald">
+                            <i data-lucide="leaf"></i>
+                        </div>
+                        <h3>100% Eco-Friendly</h3>
+                        <p>Our solutions utilize organic botanicals that destroy target pests while keeping humans and pets perfectly safe.</p>
+                    </div>
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon bg-cyan">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h3>Certified Biologists</h3>
+                        <p>Our technicians are licensed pest biologists who understand pest behaviors and map entry vectors scientifically.</p>
+                    </div>
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon bg-blue">
+                            <i data-lucide="phone-call"></i>
+                        </div>
+                        <h3>24/7 Fast Response</h3>
+                        <p>Emergency pest sightings? We deploy local response units within 2 hours of booking, day or night.</p>
+                    </div>
+                    <div class="glass-card feature-card">
+                        <div class="feature-icon bg-amber">
+                            <i data-lucide="check-square"></i>
+                        </div>
+                        <h3>No Pest Warranty</h3>
+                        <p>If bugs return within 30 days after our signature clean, we come back and spray again for zero additional charge.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Pest Library -->
+        <section id="pest-library" class="pest-library-section container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Know Your Enemy: <span class="gradient-text">Interactive Pest Library</span></h2>
+                <p class="section-subtitle">Not sure what's crawling in the shadow? Identify common pests, check threat levels, and view expert prevention tips instantly.</p>
+            </div>
+            
+            <div class="pest-library-container">
+                <!-- Navigation Tabs -->
+                <div class="pest-tabs">
+                    <button class="pest-tab-btn active" data-pest="termites">
+                        <i data-lucide="box"></i> Termites
+                    </button>
+                    <button class="pest-tab-btn" data-pest="rodents">
+                        <i data-lucide="bone"></i> Rodents
+                    </button>
+                    <button class="pest-tab-btn" data-pest="bedbugs">
+                        <i data-lucide="bed"></i> Bed Bugs
+                    </button>
+                    <button class="pest-tab-btn" data-pest="ants">
+                        <i data-lucide="bug"></i> Ants
+                    </button>
+                    <button class="pest-tab-btn" data-pest="cockroaches">
+                        <i data-lucide="flame"></i> Cockroaches
+                    </button>
+                    <button class="pest-tab-btn" data-pest="spiders">
+                        <i data-lucide="scissors"></i> Spiders
+                    </button>
+                </div>
+
+                <!-- Pest Details View Area (Rendered via JS) -->
+                <div class="glass-card pest-details-card" id="pest-details-view">
+                    <div class="pest-details-grid">
+                        <div class="pest-details-info">
+                            <div class="pest-header">
+                                <h3 id="pest-name" class="pest-title">Subterranean Termites</h3>
+                                <span id="pest-risk" class="risk-badge risk-high"><i data-lucide="alert-triangle"></i> Structural Risk: Extreme</span>
+                            </div>
+                            <p id="pest-desc" class="pest-desc-text">Termites operate silently inside wooden foundations. By the time visual signs appear, thousands of dollars in drywall and framing damage may already be done.</p>
+                            
+                            <div class="pest-bullets">
+                                <div class="bullet-box">
+                                    <h4><i data-lucide="eye" class="text-accent"></i> Key Indicators</h4>
+                                    <ul id="pest-indicators">
+                                        <li>Mud tubes along concrete crawlspaces</li>
+                                        <li>Hollow-sounding structural timbers</li>
+                                        <li>Discarded translucent wings near window sills</li>
+                                    </ul>
+                                </div>
+                                <div class="bullet-box">
+                                    <h4><i data-lucide="shield-alert" class="text-accent"></i> Pro Prevention Tips</h4>
+                                    <ul id="pest-prevention">
+                                        <li>Redirect gutter downspouts away from home perimeter</li>
+                                        <li>Maintain a 6-inch gap between soil and wooden siding</li>
+                                        <li>Schedule annual inspections of crawlspaces and basements</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="pest-cta">
+                                <button class="btn btn-primary pest-schedule-btn" id="pest-action-btn">Schedule Termite Treatment</button>
+                            </div>
+                        </div>
+
+                        <!-- Graphical SVG Representation of the Pest -->
+                        <div class="pest-details-graphics">
+                            <div class="pest-art-wrapper" id="pest-art-canvas">
+                                <!-- Default Termite SVG is injected here by JS, showing loading placeholder first -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Estimator Section -->
+        <section id="estimator" class="estimator-section bg-secondary-layer">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Get an Instant <span class="gradient-text">Price Estimate</span></h2>
+                    <p class="section-subtitle">No pushy sales calls. Adjust the parameters below to see your customized flat-rate estimate immediately.</p>
+                </div>
+
+                <div class="estimator-grid">
+                    <!-- Calculator Card -->
+                    <div class="glass-card calculator-card">
+                        <div class="control-group">
+                            <label for="home-size" class="input-label">
+                                <span>Home Size (Sq Ft)</span>
+                                <span id="home-size-display" class="label-badge">1,500 sq ft</span>
+                            </label>
+                            <input type="range" id="home-size" min="500" max="5000" step="100" value="1500" class="slider">
+                            <div class="slider-marks">
+                                <span>500 sq ft</span>
+                                <span>5,000 sq ft</span>
+                            </div>
+                        </div>
+
+                        <div class="control-row">
+                            <div class="control-group">
+                                <label for="pest-select" class="input-label">Pest Type</label>
+                                <div class="select-wrapper">
+                                    <select id="pest-select" class="select-input">
+                                        <option value="ants">General Ants & Spiders</option>
+                                        <option value="cockroaches">Cockroaches</option>
+                                        <option value="rodents">Mice & Rats</option>
+                                        <option value="termites" selected>Termites (Barriers)</option>
+                                        <option value="bedbugs">Bed Bugs (Thermal/Chem)</option>
+                                    </select>
+                                    <i data-lucide="chevron-down" class="select-icon"></i>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label for="frequency-select" class="input-label">Frequency</label>
+                                <div class="select-wrapper">
+                                    <select id="frequency-select" class="select-input">
+                                        <option value="onetime">One-Time Treatment</option>
+                                        <option value="monthly">Monthly Shield (Save 20%)</option>
+                                        <option value="quarterly" selected>Quarterly Guardian (Save 10%)</option>
+                                    </select>
+                                    <i data-lucide="chevron-down" class="select-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="estimator-features">
+                            <div class="estimator-feat"><i data-lucide="check" class="text-accent"></i> Eco-friendly chemicals included</div>
+                            <div class="estimator-feat"><i data-lucide="check" class="text-accent"></i> Standard 30-day perimeter barrier</div>
+                            <div class="estimator-feat"><i data-lucide="check" class="text-accent"></i> Complimentary full attic inspection</div>
+                        </div>
+                    </div>
+
+                    <!-- Result Summary Card -->
+                    <div class="glass-card result-card">
+                        <span class="pricing-label">YOUR ESTIMATED QUOTE</span>
+                        <div class="price-display">
+                            <span class="currency">$</span>
+                            <span id="calculated-price" class="price-value">135</span>
+                            <span id="price-frequency" class="frequency">/ quarterly</span>
+                        </div>
+                        
+                        <div class="pricing-breakdown">
+                            <div class="breakdown-row">
+                                <span>Base inspection rate</span>
+                                <span class="fw-bold">$99.00</span>
+                            </div>
+                            <div class="breakdown-row">
+                                <span>Pest-type complexity surcharge</span>
+                                <span id="surcharge-display" class="fw-bold">+$120.00</span>
+                            </div>
+                            <div class="breakdown-row">
+                                <span>Home size multiplier</span>
+                                <span id="multiplier-display" class="fw-bold">x1.25</span>
+                            </div>
+                            <div class="breakdown-row text-accent">
+                                <span id="discount-label">Discount (Quarterly program)</span>
+                                <span id="discount-display" class="fw-bold">-10%</span>
+                            </div>
+                        </div>
+
+                        <button id="estimator-book-btn" class="btn btn-primary btn-block">
+                            Lock in This Rate & Book <i data-lucide="arrow-right"></i>
+                        </button>
+                        <p class="price-guarantee"><i data-lucide="lock"></i> Final price lock valid for next 48 hours. No credit card required to hold booking.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Our Work in Action: <span class="gradient-text">Service Gallery</span></h2>
+                <p class="section-subtitle">A visual look into our biological barrier sweeps, modern termite stations, and organic product formulations deployed at client homes.</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="glass-card gallery-item" onclick="openLightbox('gallery_kitchen.png', 'Residential Kitchen Inspection - Certified biologist mapping baseboard crawlspaces.')">
+                    <img src="gallery_kitchen.png" alt="Kitchen Inspection" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i data-lucide="zoom-in"></i>
+                        <span>Kitchen Inspection</span>
+                    </div>
+                </div>
+                <div class="glass-card gallery-item" onclick="openLightbox('gallery_products.png', 'Eco-Friendly Treatments - Botanical oils and non-toxic sprays certified child and pet safe.')">
+                    <img src="gallery_products.png" alt="Eco-Friendly Products" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i data-lucide="zoom-in"></i>
+                        <span>Botanical Products</span>
+                    </div>
+                </div>
+                <div class="glass-card gallery-item" onclick="openLightbox('gallery_bait.png', 'Termite Bait Array - Sub-soil bait station sealing property borders.')">
+                    <img src="gallery_bait.png" alt="Termite Bait Station" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i data-lucide="zoom-in"></i>
+                        <span>Termite Bait Protection</span>
+                    </div>
+                </div>
+                <div class="glass-card gallery-item" onclick="openLightbox('gallery_garden.png', 'Perimeter Boundary Sweeps - Spraying garden borders to establish pest exclusions.')">
+                    <img src="gallery_garden.png" alt="Garden Perimeter Spraying" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <i data-lucide="zoom-in"></i>
+                        <span>Perimeter Barrier Sweeps</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Modal for Premium Image View -->
+        <div id="gallery-lightbox" class="lightbox-modal" onclick="closeLightbox()">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+
+        <!-- Booking Wizard Section -->
+        <section id="booking" class="booking-section container">
+            <div class="booking-grid">
+                <div class="booking-info">
+                    <div class="badge-container">
+                        <span class="badge"><i data-lucide="calendar-check"></i> FAST SETUP</span>
+                    </div>
+                    <h2 class="section-title text-left">Schedule Your Professional Treatment in <span class="gradient-text">60 Seconds</span></h2>
+                    <p class="section-subtitle text-left">Fill out the quick schedule form, choose a convenient arrival window, and a certified technician will arrive on time, fully equipped.</p>
+                    
+                    <div class="booking-steps-visual">
+                        <div class="b-step" id="step-node-1">
+                            <div class="step-num active">1</div>
+                            <div>
+                                <h4>Select Plan & Specifications</h4>
+                                <p>Tell us your target pests and physical home size.</p>
+                            </div>
+                        </div>
+                        <div class="b-step" id="step-node-2">
+                            <div class="step-num">2</div>
+                            <div>
+                                <h4>Select Time slot & Info</h4>
+                                <p>Pick from convenient same-day or weekly slots.</p>
+                            </div>
+                        </div>
+                        <div class="b-step" id="step-node-3">
+                            <div class="step-num">3</div>
+                            <div>
+                                <h4>Confirm Protection</h4>
+                                <p>We deploy technician and protect your environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Multi-Step Form Card -->
+                <div class="glass-card booking-card-container">
+                    <form id="booking-form" novalidate>
+                        <!-- Form Step 1 -->
+                        <div class="form-step active" id="step-1">
+                            <h3 class="form-step-title">Step 1: Treatment Parameters</h3>
+                            <div class="grid grid-2 mb-4">
+                                <div class="control-group">
+                                    <label class="input-label" for="book-pest">Primary Pest Target</label>
+                                    <div class="select-wrapper">
+                                        <select id="book-pest" class="select-input">
+                                            <option value="ants">General Ants & Spiders</option>
+                                            <option value="cockroaches">Cockroaches</option>
+                                            <option value="rodents">Mice & Rats</option>
+                                            <option value="termites">Termites (Barriers)</option>
+                                            <option value="bedbugs">Bed Bugs (Thermal/Chem)</option>
+                                        </select>
+                                        <i data-lucide="chevron-down" class="select-icon"></i>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="input-label" for="book-size">Home Area Size</label>
+                                    <div class="select-wrapper">
+                                        <select id="book-size" class="select-input">
+                                            <option value="small">Small (< 1,000 sq ft)</option>
+                                            <option value="medium" selected>Medium (1,000 - 2,500 sq ft)</option>
+                                            <option value="large">Large (2,500 - 4,000 sq ft)</option>
+                                            <option value="xlarge">Estate (4,000+ sq ft)</option>
+                                        </select>
+                                        <i data-lucide="chevron-down" class="select-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="control-group mb-6">
+                                <label class="input-label">Describe Pest Activity or Sightings (Optional)</label>
+                                <textarea id="book-notes" class="textarea-input" placeholder="e.g. Saw small ants in kitchen crawl spaces and around window seals..."></textarea>
+                            </div>
+
+                            <button type="button" class="btn btn-primary w-full next-step-btn">
+                                Proceed to Contact Info <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <!-- Form Step 2 -->
+                        <div class="form-step" id="step-2">
+                            <h3 class="form-step-title">Step 2: Schedule & Contact</h3>
+                            <div class="grid grid-2 mb-4">
+                                <div class="control-group">
+                                    <label class="input-label" for="book-name">Full Name</label>
+                                    <input type="text" id="book-name" class="text-input" placeholder="John Doe" required>
+                                    <span class="error-message">Name is required.</span>
+                                </div>
+                                <div class="control-group">
+                                    <label class="input-label" for="book-phone">Phone Number</label>
+                                    <input type="tel" id="book-phone" class="text-input" placeholder="(555) 123-4567" required>
+                                    <span class="error-message">Valid phone is required.</span>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-2 mb-4">
+                                <div class="control-group">
+                                    <label class="input-label" for="book-email">Email Address</label>
+                                    <input type="email" id="book-email" class="text-input" placeholder="john@example.com" required>
+                                    <span class="error-message">Valid email is required.</span>
+                                </div>
+                                <div class="control-group">
+                                    <label class="input-label" for="book-date">Preferred Date</label>
+                                    <input type="date" id="book-date" class="text-input" required>
+                                    <span class="error-message">Please select a future date.</span>
+                                </div>
+                            </div>
+
+                            <div class="control-group mb-6">
+                                <label class="input-label" for="book-address">Property Address</label>
+                                <input type="text" id="book-address" class="text-input" placeholder="123 Guardian Way, Safety City" required>
+                                <span class="error-message">Street address is required.</span>
+                            </div>
+
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-secondary prev-step-btn">
+                                    <i data-lucide="arrow-left"></i> Back
+                                </button>
+                                <button type="submit" class="btn btn-primary submit-booking-btn">
+                                    Confirm Secure Appointment <i data-lucide="shield-check"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Success State Screen (Initially hidden) -->
+                    <div class="booking-success-state" id="booking-success-view">
+                        <div class="success-icon-badge">
+                            <i data-lucide="badge-check"></i>
+                        </div>
+                        <h3>Booking Request Lock-In Success!</h3>
+                        <p class="success-intro">We've saved your custom quote estimate rate and reserved your slot. A licensed technician will text you 15 minutes before arrival.</p>
+                        
+                        <div class="glass-card success-summary">
+                            <div class="summary-item">
+                                <span class="sum-lbl">Reservation Target:</span>
+                                <span id="sum-pest" class="sum-val">Termite Treatment</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="sum-lbl">Date Confirmed:</span>
+                                <span id="sum-date" class="sum-val">Oct 14, 2026</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="sum-lbl">Service Representative:</span>
+                                <span class="sum-val">Local Biologist Assigned</span>
+                            </div>
+                            <div class="summary-item total-summary-row">
+                                <span class="sum-lbl text-accent">Total Price Lock:</span>
+                                <span id="sum-price" class="sum-val text-accent">$135.00</span>
+                            </div>
+                        </div>
+
+                        <button id="reset-booking-btn" class="btn btn-secondary btn-sm mt-4">Schedule Another Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section bg-secondary-layer">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">What Our Shield Partners Say</h2>
+                    <p class="section-subtitle">We protect over 15,000 residential and commercial spaces from structural pests. Read reviews from verified local customers.</p>
+                </div>
+
+                <div class="grid grid-3">
+                    <div class="glass-card review-card">
+                        <div class="rating-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="review-text">"I was losing sleep over ants getting into the kitchen cabinets. Uttam Business arrived inside 2 hours, identified the wall-nesting colonies, and used natural botanicals. Zero ants in 3 months now!"</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">SP</div>
+                            <div>
+                                <h4 class="reviewer-name">Sarah Jenkins</h4>
+                                <p class="reviewer-meta">Homeowner, Greenville</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card review-card">
+                        <div class="rating-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="review-text">"They handled a severe termite infestation in our commercial warehouse structure. Their biologist mapped bait systems and designed a custom defense system. Professional service at fair pricing."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">MK</div>
+                            <div>
+                                <h4 class="reviewer-name">Marcus Kross</h4>
+                                <p class="reviewer-meta">Operations Mgr, Kross Logistics</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card review-card">
+                        <div class="rating-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="review-text">"Having young children and two dogs, I was very suspicious of industrial sprays. The technician was incredibly patient, explained their botanical products, and sealed our deck base. 100% recommend!"</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">EL</div>
+                            <div>
+                                <h4 class="reviewer-name">Elena Rostova</h4>
+                                <p class="reviewer-meta">Parent, West Heights</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card review-card">
+                        <div class="rating-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="review-text">"We had a severe cockroach issue in our cafe kitchen. Uttam Business came overnight, used non-toxic bait gel, and kept us fully compliant with health codes. Highly recommended!"</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">DM</div>
+                            <div>
+                                <h4 class="reviewer-name">David Miller</h4>
+                                <p class="reviewer-meta">Cafe Owner, Downtown</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card review-card">
+                        <div class="rating-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="review-text">"Very polite technicians! They wore shoe covers indoors and walked me through their botanical barriers. Haven't seen a single spider since they visited."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">PS</div>
+                            <div>
+                                <h4 class="reviewer-name">Priya Sharma</h4>
+                                <p class="reviewer-meta">Homeowner, North Ridge</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card review-card">
+                        <div class="rating-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="review-text">"Managing 12 residential buildings means constant pest complaints. Uttam Business handles all our rodent and bedbug calls fast. Their online pricing keeps billing simple."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">RC</div>
+                            <div>
+                                <h4 class="reviewer-name">Robert Chen</h4>
+                                <p class="reviewer-meta">Property Manager, Apex Units</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card review-card">
+                        <div class="rating-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="review-text">"I was worried about toxic sprays around my toddlers. Their biologist used organic botanical oils that smell like mint. Excellent service and zero fleas!"</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">LW</div>
+                            <div>
+                                <h4 class="reviewer-name">Linda Watson</h4>
+                                <p class="reviewer-meta">Parent, Oak Creek</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card review-card">
+                        <div class="rating-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="review-text">"Termites were damaging our storage pallets. Uttam Business mapped sub-soil bait stations and set a permanent defense zone. Fast, professional, and reliable."</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">AP</div>
+                            <div>
+                                <h4 class="reviewer-name">Amit Patel</h4>
+                                <p class="reviewer-meta">Warehouse Manager, SafeStore</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card review-card">
+                        <div class="rating-stars">
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                            <i data-lucide="star" class="star-filled"></i>
+                        </div>
+                        <p class="review-text">"They responded to my wasp nest emergency on a Sunday inside 90 minutes. Cleared the nest safely and swept the eaves. Five-star service!"</p>
+                        <div class="reviewer">
+                            <div class="reviewer-avatar">JT</div>
+                            <div>
+                                <h4 class="reviewer-name">Jessica Taylor</h4>
+                                <p class="reviewer-meta">Homeowner, East End</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Accordion Section -->
+        <section id="faqs" class="faqs-section container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about our biological barriers, chemical safety protocols, and billing plans.</p>
+            </div>
+
+            <div class="faqs-accordion-wrapper">
+                <div class="accordion-item glass-card">
+                    <button class="accordion-trigger">
+                        <span>Are the treatments safe for indoor dogs, cats, and toddlers?</span>
+                        <i data-lucide="chevron-down" class="accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Absolutely. We use botanical-based formulations certified safe for families and domestic animals. We only ask that pets and toddlers stay off sprayed surfaces for 15 minutes after treatment to allow complete drying.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-card">
+                    <button class="accordion-trigger">
+                        <span>How soon can your technician arrive at my property?</span>
+                        <i data-lucide="chevron-down" class="accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>For bookings completed before 2:00 PM, we guarantee same-day deployment. If you experience an active emergency infestation overnight, our emergency hotline assigns on-call technicians immediately.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-card">
+                    <button class="accordion-trigger">
+                        <span>Does your one-time service include a guarantee?</span>
+                        <i data-lucide="chevron-down" class="accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes, all single treatment runs feature a 30-day "No Pest" warranty. If the target pests crawl back into your perimeter lines inside 30 days, we perform a second clean for free.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-card">
+                    <button class="accordion-trigger">
+                        <span>What is the difference between Termite Barriers and general treatments?</span>
+                        <i data-lucide="chevron-down" class="accordion-arrow"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <p>General pest treatments protect against crawling insects (ants, spiders, roaches) by creating a chemical perimeter. Termite treatments are specialized sub-soil trenches or bait arrays that prevent boring insects from breaching wooden foundations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a href="#" class="logo mb-4">
+                    <div class="logo-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <span class="logo-text">Uttam<span class="text-accent">Business</span></span>
+                </a>
+                <p>Advanced botanical pest control barriers designed by expert biologists. Safe for families, lethal for structural and environmental pests.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Navigation</h4>
+                <ul>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#pest-library">Pest Identifier</a></li>
+                    <li><a href="#estimator">Price Estimator</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#booking">Book Appointment</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contacts">
+                <h4>Contact Shield Base</h4>
+                <ul>
+                    <li><i data-lucide="phone"></i> <span>(800) 555-GUARD</span></li>
+                    <li><i data-lucide="mail"></i> <span>support@uttambusiness.test</span></li>
+                    <li><i data-lucide="map-pin"></i> <span>100 Boundary Circle, Suite 400, Clean City</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-hours">
+                <h4>Operating Hours</h4>
+                <ul>
+                    <li>Monday - Friday: 7:00 AM - 9:00 PM</li>
+                    <li>Saturday: 8:00 AM - 6:00 PM</li>
+                    <li>Sunday (Emergencies): 24 Hours</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Uttam Business Inc. All Rights Reserved. Built with Eco-Shield Technologies.</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Widget -->
+    <div class="whatsapp-widget-container">
+        <!-- Chat Box Popup (Initially Hidden) -->
+        <div class="whatsapp-chat-box" id="whatsapp-chat-box">
+            <div class="whatsapp-chat-header">
+                <div class="whatsapp-avatar">UB</div>
+                <div class="whatsapp-chat-title">
+                    <h4>Uttam Business</h4>
+                    <span class="whatsapp-status-indicator">● Online</span>
+                </div>
+                <button class="whatsapp-close-btn" onclick="toggleWhatsAppPopup(event)">&times;</button>
+            </div>
+            <div class="whatsapp-chat-body">
+                <div class="whatsapp-chat-bubble">
+                    <p>Hello! Thanks for visiting Uttam Business. How can we help you protect your environment from pests today? 🛡️</p>
+                    <span class="bubble-time">Just now</span>
+                </div>
+            </div>
+            <div class="whatsapp-chat-footer">
+                <a href="https://wa.me/917385208441?text=Hello%20Uttam%20Business%2C%20I%20would%20like%20to%20inquire%20about%20your%20pest%20control%20services%21" target="_blank" rel="noopener noreferrer" class="whatsapp-chat-btn">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.59 1.968 14.117 9.42 12.012 1.07 12.008 1.07c-4.794 0-8.7 3.91-8.7 8.7-.001 1.777.497 3.488 1.441 5.068L3.733 19.9l5.127-1.346zm11.306-6.195c-.3-.15-1.774-.875-2.05-.975-.275-.1-.475-.15-.675.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-3.579-1.787-4.747-3.21-5.122-3.86-.175-.3-.033-.463.118-.613.135-.134.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.589-.493-.51-.675-.52l-.575-.01c-.2 0-.525.075-.8 1.05-.275.975-1.05 1.05-1.075 1.075-.375.375-.725.925-.725 1.625 0 .825.425 2.1 1.25 3.2 2.274 3.037 4.902 4.417 8.167 5.25.772.197 1.482.167 2.042.083.626-.094 1.774-.725 2.025-1.425.25-.7.25-1.3 0-1.425zm0 0"/>
+                    </svg>
+                    Start Chat
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Trigger Button -->
+        <button class="whatsapp-float-btn" id="whatsapp-toggle-btn" onclick="toggleWhatsAppPopup(event)" title="Need Help? Chat on WhatsApp">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.97C16.59 1.968 14.117 9.42 12.012 1.07 12.008 1.07c-4.794 0-8.7 3.91-8.7 8.7-.001 1.777.497 3.488 1.441 5.068L3.733 19.9l5.127-1.346zm11.306-6.195c-.3-.15-1.774-.875-2.05-.975-.275-.1-.475-.15-.675.15-.2.3-.775.975-.95 1.175-.175.2-.35.225-.65.075-3.579-1.787-4.747-3.21-5.122-3.86-.175-.3-.033-.463.118-.613.135-.134.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.675-1.625-.925-2.225-.244-.589-.493-.51-.675-.52l-.575-.01c-.2 0-.525.075-.8 1.05-.275.975-1.05 1.05-1.075 1.075-.375.375-.725.925-.725 1.625 0 .825.425 2.1 1.25 3.2 2.274 3.037 4.902 4.417 8.167 5.25.772.197 1.482.167 2.042.083.626-.094 1.774-.725 2.025-1.425.25-.7.25-1.3 0-1.425zm0 0"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Spawn Cockroach Interactive Button -->
+    <div class="spawn-roach-btn-container">
+        <button class="spawn-roach-btn" id="spawn-roach-trigger" title="Spawn a target cockroach!">
+            <i data-lucide="bug"></i>
+        </button>
+    </div>
+
+    <!-- Roach Exterminated Toast -->
+    <div class="roach-exterminated-toast" id="roach-toast">
+        <i data-lucide="shield"></i>
+        <span>Pest Exterminated! 100% Protection.</span>
+    </div>
+
+    <!-- App JS Execution -->
+    <script src="app.js"></script>
+</body>
+</html>
