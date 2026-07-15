@@ -743,7 +743,7 @@ const ROACH_SVG_MARKUP = `
 
 function spawnCockroach() {
     // Avoid spawning too many bugs
-    if (activeRoaches.length >= 8) return;
+    if (activeRoaches.length >= 30) return;
 
     const roach = document.createElement("div");
     roach.className = "scuttling-roach";
@@ -882,10 +882,12 @@ if (spawnBtn) {
     });
 }
 
-// Automatically spawn a surprise roach on a delay
+// Automatically spawn a surprise pack of cockroaches on a delay
 setTimeout(() => {
-    spawnCockroach();
-}, 4000);
+    for (let i = 0; i < 6; i++) {
+        setTimeout(() => spawnCockroach(), i * 300);
+    }
+}, 3000);
 
 // --- GALLERY LIGHTBOX SYSTEM ---
 function openLightbox(src, caption) {
