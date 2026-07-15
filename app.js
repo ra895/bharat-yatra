@@ -882,12 +882,18 @@ if (spawnBtn) {
     });
 }
 
-// Automatically spawn a surprise pack of cockroaches on a delay
-setTimeout(() => {
-    for (let i = 0; i < 12; i++) {
-        setTimeout(() => spawnCockroach(), i * 200);
+// Automatically spawn exactly 5 cockroaches on page load
+function spawnInitialPack(count) {
+    for (let i = 0; i < count; i++) {
+        setTimeout(() => spawnCockroach(), i * 150);
     }
-}, 2000);
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => spawnInitialPack(5));
+} else {
+    spawnInitialPack(5);
+}
 
 // --- GALLERY LIGHTBOX SYSTEM ---
 function openLightbox(src, caption) {
