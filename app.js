@@ -743,7 +743,7 @@ const ROACH_SVG_MARKUP = `
 
 function spawnCockroach() {
     // Avoid spawning too many bugs
-    if (activeRoaches.length >= 30) return;
+    if (activeRoaches.length >= 50) return;
 
     const roach = document.createElement("div");
     roach.className = "scuttling-roach";
@@ -884,10 +884,10 @@ if (spawnBtn) {
 
 // Automatically spawn a surprise pack of cockroaches on a delay
 setTimeout(() => {
-    for (let i = 0; i < 6; i++) {
-        setTimeout(() => spawnCockroach(), i * 300);
+    for (let i = 0; i < 12; i++) {
+        setTimeout(() => spawnCockroach(), i * 200);
     }
-}, 3000);
+}, 2000);
 
 // --- GALLERY LIGHTBOX SYSTEM ---
 function openLightbox(src, caption) {
