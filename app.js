@@ -545,19 +545,10 @@ if (estimatorBookBtn) {
     });
 }
 
-// --- STEP-BY-STEP BOOKING FORM LOGIC ---
+// --- SIMPLE CONTACT FORM LOGIC ---
 const bookingForm = document.getElementById("booking-form");
-const step1Container = document.getElementById("step-1");
-const step2Container = document.getElementById("step-2");
 const successView = document.getElementById("booking-success-view");
-
-const nextStepBtn = document.querySelector(".next-step-btn");
-const prevStepBtn = document.querySelector(".prev-step-btn");
 const resetBookingBtn = document.getElementById("reset-booking-btn");
-
-const stepNode1 = document.getElementById("step-node-1");
-const stepNode2 = document.getElementById("step-node-2");
-const stepNode3 = document.getElementById("step-node-3");
 
 // Validation helper functions
 function validateInput(inputEl) {
@@ -578,16 +569,9 @@ function validateInput(inputEl) {
     }
 
     if (isValid && inputEl.type === "tel") {
-        // Simple numeric clean, count minimum 10 digits
+        // Simple phone numeric check
         const phoneDigits = inputEl.value.replace(/\D/g, "");
-        isValid = phoneDigits.length >= 10;
-    }
-
-    if (isValid && inputEl.id === "book-date") {
-        const selectedDate = new Date(inputEl.value);
-        const today = new Date();
-        today.setHours(0, 0, 0, 0);
-        isValid = selectedDate >= today;
+        isValid = phoneDigits.length >= 8; // Indian/Global contact number formats
     }
 
     if (!isValid) {
@@ -597,31 +581,6 @@ function validateInput(inputEl) {
     }
 
     return isValid;
-}
-
-// Step Transitions
-if (nextStepBtn) {
-    nextStepBtn.addEventListener("click", () => {
-        // Step 1 doesn't have required validations, move straight to Step 2
-        step1Container.classList.remove("active");
-        step2Container.classList.add("active");
-
-        // Update step indicators
-        if (stepNode2) {
-            stepNode2.querySelector(".step-num").classList.add("active");
-        }
-    });
-}
-
-if (prevStepBtn) {
-    prevStepBtn.addEventListener("click", () => {
-        step2Container.classList.remove("active");
-        step1Container.classList.add("active");
-
-        if (stepNode2) {
-            stepNode2.querySelector(".step-num").classList.remove("active");
-        }
-    });
 }
 
 // Live Validation on User Blur/Input
@@ -641,10 +600,10 @@ if (bookingForm) {
     bookingForm.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        // Validate all Step 2 inputs before proceeding
+        // Validate all inputs before proceeding
         let isFormValid = true;
-        const step2RequiredInputs = step2Container.querySelectorAll("input[required]");
-        step2RequiredInputs.forEach(input => {
+        const requiredInputs = bookingForm.querySelectorAll("input[required]");
+        requiredInputs.forEach(input => {
             if (!validateInput(input)) {
                 isFormValid = false;
             }
@@ -654,49 +613,30 @@ if (bookingForm) {
             return;
         }
 
-        // Generate Estimate matching the form choices
-        const selectedPest = document.getElementById("book-pest").value;
-        const selectedSize = document.getElementById("book-size").value;
-        
-        let sizeMultiplier = 1.25; // Medium default
-        if (selectedSize === "small") sizeMultiplier = 1.00;
-        if (selectedSize === "large") sizeMultiplier = 1.50;
-        if (selectedSize === "xlarge") sizeMultiplier = 1.85;
-
-        const surcharge = SURCHARGES[selectedPest] || 0.00;
-        // Assume default quarterly program for booking discount
-        const finalCalculatedPrice = Math.round((BASE_RATE + surcharge) * sizeMultiplier * 0.90);
+        const name = document.getElementById("book-name").value;
+        const email = document.getElementById("book-email").value;
+        const phone = document.getElementById("book-phone").value;
 
         // Update booking success screen data
-        const sumPest = document.getElementById("sum-pest");
-        const sumDate = document.getElementById("sum-date");
-        const sumPrice = document.getElementById("sum-price");
+        const sumName = document.getElementById("sum-name");
+        const sumEmail = document.getElementById("sum-email");
+        const sumPhone = document.getElementById("sum-phone");
 
-        const pestLabelText = document.getElementById("book-pest").options[document.getElementById("book-pest").selectedIndex].text;
-        const rawDateStr = document.getElementById("book-date").value;
-        
-        // Format Date nicely e.g., Oct 14, 2026
-        let formattedDate = rawDateStr;
-        if (rawDateStr) {
-            const dateObj = new Date(rawDateStr + "T00:00:00");
-            formattedDate = dateObj.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
-        }
+        if (sumName) sumName.textContent = name;
+        if (sumEmail) sumEmail.textContent = email;
+        if (sumPhone) sumPhone.textContent = phone;
 
-        if (sumPest) sumPest.textContent = pestLabelText;
-        if (sumDate) sumDate.textContent = formattedDate;
-        if (sumPrice) sumPrice.textContent = `$${finalCalculatedPrice}.00`;
-
-        // Prepare payload for backend email dispatch
+        // Prepare payload for backend email dispatch (PHP fallback requirements)
         const payload = {
-            name: document.getElementById("book-name").value,
-            email: document.getElementById("book-email").value,
-            phone: document.getElementById("book-phone").value,
-            date: rawDateStr,
-            address: document.getElementById("book-address").value,
-            pest: selectedPest,
-            size: selectedSize,
-            notes: document.getElementById("book-notes").value,
-            price: `$${finalCalculatedPrice}.00`
+            name: name,
+            email: email,
+            phone: phone,
+            date: new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }),
+            address: "Callback Requested",
+            pest: "General Inquiry",
+            size: "N/A",
+            notes: "Immediate callback requested from single contact form.",
+            price: "Free Consultation"
         };
 
         // Fire-and-forget booking notification email to receiver
@@ -715,14 +655,9 @@ if (bookingForm) {
             console.error("Failed to dispatch email:", err);
         });
 
-        // Switch wizard containers to Success View
+        // Switch containers to Success View
         bookingForm.style.display = "none";
-        successView.classList.add("active");
-
-        // Complete step indicator
-        if (stepNode3) {
-            stepNode3.querySelector(".step-num").classList.add("active");
-        }
+        if (successView) successView.classList.add("active");
     });
 }
 
@@ -733,15 +668,7 @@ if (resetBookingBtn) {
             bookingForm.reset();
             bookingForm.style.display = "block";
         }
-        successView.classList.remove("active");
-
-        // Reset step indicators
-        if (stepNode2) stepNode2.querySelector(".step-num").classList.remove("active");
-        if (stepNode3) stepNode3.querySelector(".step-num").classList.remove("active");
-
-        // Set Step 1 active again
-        step2Container.classList.remove("active");
-        step1Container.classList.add("active");
+        if (successView) successView.classList.remove("active");
     });
 }
 
